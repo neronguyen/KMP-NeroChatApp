@@ -39,8 +39,8 @@ kotlin {
                 implementation(libs.jetbrains.compose.components.resources)
                 implementation(libs.jetbrains.compose.material3)
                 implementation(libs.jetbrains.compose.ui.tooling.preview)
+                implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.jetbrains.lifecycle.runtime.compose)
-                implementation(libs.jetbrains.lifecycle.viewmodel.compose)
                 implementation(libs.arrow.core)
                 implementation(libs.metrox.viewmodel.compose)
             }

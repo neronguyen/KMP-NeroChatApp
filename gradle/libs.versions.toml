@@ -13,7 +13,7 @@ compose-material3-adaptive = "1.2.0"
 compose-material-icons = "1.7.3"
 
 # Jetbrains KotlinX
-kotlinx-coroutines = "1.10.2"
+kotlinx-coroutines = "1.11.0"
 
 # AndroidX
 androidx-activity = "1.13.0"
@@ -21,7 +21,7 @@ androidx-activity = "1.13.0"
 # Third party
 arrow = "2.2.2.1"
 ktor = "3.4.3"
-metro = "1.0.0-RC4"
+metro = "1.0.0"
 
 [libraries]
 # Jetbrains Compose
@@ -33,10 +33,10 @@ jetbrains-compose-ui-tooling = { group = "org.jetbrains.compose.ui", name = "ui-
 jetbrains-compose-ui-tooling-preview = { group = "org.jetbrains.compose.ui", name = "ui-tooling-preview", version.ref = "compose-multiplatform" }
 
 # Jetbrains KotlinX
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 
 # Jetbrains Lifecycle
-jetbrains-lifecycle-viewmodel-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "compose-lifecycle" }
 jetbrains-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "compose-lifecycle" }
 
 # AndroidX
@@ -67,6 +67,7 @@ compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-m
 
 # Jetbrains Kotlin
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
 # Android
 android-application = { id = "com.android.application", version.ref = "agp" }

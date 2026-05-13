@@ -3,7 +3,7 @@ package io.github.neronguyenvn.auth.presentation.register
 import androidx.compose.foundation.text.input.TextFieldState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.AppScope 
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metrox.viewmodel.ViewModelKey
@@ -37,7 +37,7 @@ class RegisterViewModel(
 
     fun onIntent(intent: RegisterIntent) {
         when (intent) {
-            is RegisterIntent.SubmitRegistration -> validateInputs()
+            is RegisterIntent.SubmitRegistration -> register()
             else -> Unit
         }
     }
