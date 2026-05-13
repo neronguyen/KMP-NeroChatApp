@@ -7,14 +7,14 @@ import io.github.neronguyenvn.core.domain.auth.model.error.PasswordError
 
 object PasswordValidator {
 
-    private const val MIN_PASSWORD_LENGTH = 8
+    private const val MIN_PASSWORD_LENGTH = 10
 
     fun validate(password: String): Either<PasswordError, String> = either {
         val trimmedPassword = password.trim()
+        ensure(trimmedPassword.none { it.isWhitespace() }) { PasswordError.HasWhiteSpace }
         ensure(trimmedPassword.length >= MIN_PASSWORD_LENGTH) { PasswordError.TooShort }
         ensure(trimmedPassword.any { it.isDigit() }) { PasswordError.NoDigit }
-        ensure(trimmedPassword.any { it.isUpperCase() }) { PasswordError.NoUppercase }
-        ensure(trimmedPassword.none { it.isWhitespace() }) { PasswordError.HasWhiteSpace }
+        ensure(trimmedPassword.any { it.isLetter() }) { PasswordError.NoLetter }
         trimmedPassword
     }
 }
