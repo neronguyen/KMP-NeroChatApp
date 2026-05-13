@@ -118,9 +118,11 @@ fun HttpStatusCode.asDataError() = when (this) {
 }
 
 fun constructRoute(route: String): String {
-    return when {
-        route.contains(UrlConstants.BASE_URL_HTTP) -> route
-        route.startsWith("/") -> "${UrlConstants.BASE_URL_HTTP}$route"
-        else -> "${UrlConstants.BASE_URL_HTTP}/$route"
+    if (route.contains(UrlConstants.BASE_URL_HTTP)) {
+        return route
     }
+
+    val sanitizedRoute = route.removePrefix("/")
+    val baseUrl = UrlConstants.BASE_URL_HTTP.removeSuffix("/") + "/"
+    return "$baseUrl$sanitizedRoute"
 }
