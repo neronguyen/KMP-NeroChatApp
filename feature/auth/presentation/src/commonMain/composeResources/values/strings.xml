@@ -15,4 +15,8 @@
     <string name="error_email_invalid">Invalid email format</string>
     <string name="error_display_name_empty">Display name cannot be empty</string>
     <string name="error_display_name_invalid">Display name is invalid</string>
+
+    <string name="account_successfully_created">Chat account successfully created!</string>
+    <string name="verification_email_sent_to_x">We've sent a verification email to %1$s</string>
+    <string name="resend_verification_email">Resend verification email</string>
 </resources>

@@ -47,7 +47,7 @@ fun RegisterRoute(viewModel: RegisterViewModel = metroViewModel()) {
 }
 
 @Composable
-internal fun RegisterScreen(
+private fun RegisterScreen(
     uiState: RegisterUiState,
     emailState: TextFieldState,
     displayNameState: TextFieldState,
